@@ -1,0 +1,121 @@
+.scroll_area{
+  display: flex;
+  height: 90rpx;
+  flex-direction: row;
+  background-color: #fff;
+  overflow-x: scroll;
+  white-space: nowrap;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  position: fixed;
+}
+.scroll_area .scroll_item{
+  min-width: 18vw;
+  display: inline-block;
+  height: 88rpx;
+  color: #9f9f9f;
+  text-align: center;
+  border-bottom: none;
+  transition: all .1s linear;
+}
+
+.scroll_item text{
+  height: 85rpx;
+  display: inline-block;
+}
+
+.item_choose{
+  color: #ff5000;
+  border-bottom: 4rpx solid #ff5000;
+}
+
+.shop_area{
+  /* padding: 20rpx; */
+  padding-top: 20rpx;
+}
+.shop_item {
+  background: #fff;
+  margin: 0 auto;
+  /* border-radius: 10rpx; */
+  /* box-shadow: 1px 1px 10rpx rgba(1, 1, 1, .1); */
+  border-bottom: 1px solid #e0e0e0;
+  /* min-height: 291rpx; */
+  /* margin-top: 20rpx; */
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 20rpx 10rpx;
+}
+.header{
+  display: flex;
+}
+.shop_item image{
+  width: 108rpx;
+  height: 137rpx;
+}
+.shop_item .left {
+  width: 182rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 182rpx;
+}
+.shop_item .center{
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  /* justify-content: center; */
+  flex: 1;
+
+}
+.center view{
+  margin-bottom: 10rpx;
+}
+.center .name{
+  font-size: 30rpx;
+}
+.center .context{
+  color: #9f9f9f;
+}
+.center .count{
+  color: #d1d1d1;
+}
+
+.shop_item .footer{
+  display: flex;
+  /* flex: 0 0 120rpx; */
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #d1d1d1;
+  font-size: 24rpx;
+  padding-bottom: 10rpx;
+  align-items:flex-end;
+  width: 100%;
+}
+.shop_item .price{
+  font-size: 30rpx;
+  color: #ff7400;
+  display: flex;
+  align-items: flex-end;
+}
+.shop_item .price::after{
+  content: '起';
+  margin-left: 4rpx;
+  font-size: 24rpx;
+}
+
+.btn_study {
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: right;
+  padding: 0rpx 20rpx;
+  color: rgb(40, 159, 88);
+  border: 1px solid rgb(40, 159, 88);
+  background: #fff;
+  margin: 0rpx;
+  font-size: 30rpx;
+}
+
+.left .icon {
+  width: 80%;
+}

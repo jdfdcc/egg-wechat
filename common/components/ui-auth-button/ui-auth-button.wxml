@@ -1,0 +1,22 @@
+<button class="out_class"
+        loading="{{loadding}}"
+        disabled='{{loadding}}'
+        wx:if="{{!authInfo[scopeType] && openType != 'openSetting'}}" 
+        bindgetuserinfo="getUserInfo"  
+        open-type="{{openType}}"
+        >{{text}}</button>
+
+<button class="out_class" 
+        wx:elif="{{!authInfo[scopeType] && openType === 'openSetting' && !needAuthAlert}}"
+        bindopensetting="opensetting"
+        open-type="{{openType}}"
+        >{{text}}</button>
+
+<button class="out_class" 
+        wx:elif="{{!authInfo[scopeType] && openType === 'openSetting' && needAuthAlert}}"
+        bindtap='initAuthAlert'
+        bindopensetting="opensetting"
+        >{{text}}</button>
+<view wx:else>
+  <slot></slot>
+</view>

@@ -1,0 +1,5 @@
+<button bindtap="login">登录接口</button>
+<button bindtap="wxPay">支付</button>
+<button bindtap="getUserInfo">获取用户的基本信息</button>
+<button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="onGotPhoneNumber">获取手机号码</button>

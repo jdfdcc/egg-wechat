@@ -1,0 +1,9 @@
+<view
+  style='top: {{clientY}}px;left: {{clientX}}px'
+  class="out_class ui_move_btn"
+  catchtouchmove='bindtouchmove'
+  catchtouchend='bindtouchend'
+  bindtap='click'
+  >
+  <slot />
+</view>

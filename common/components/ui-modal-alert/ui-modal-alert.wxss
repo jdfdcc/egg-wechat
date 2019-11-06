@@ -1,0 +1,58 @@
+@import '../../../assets/wxss/animation.wxss';
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(1,1,1,.5);
+  z-index: 10000;
+  display:flex;  /*flex容器*/
+  justify-content: center;
+  align-items: center;
+}
+
+.scaleIn {
+  animation: scale_in .4s;
+}
+.animated {
+  animation-duration: .4s;
+}
+
+.animated_position.bottom{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.animated_position.top{
+  position: absolute;
+  top: 0px;
+}
+.animated_position.left{
+  position: absolute;
+  left: 0px;
+}
+.animated_position.right{
+  position: absolute;
+  right: 0px;
+}
+
+.animated.reverse {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes scale_in{
+  0% {
+    opacity: 1;
+    transform: scale(0);
+    
+  }
+  50% {
+    opacity: .8;
+    transform: scale(1.2)
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+}

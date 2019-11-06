@@ -1,0 +1,91 @@
+{
+	"miniprogramRoot": "/",
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "suffix",
+				"value": ".md"
+			}
+		]
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.1",
+	"appid": "wxcb03144d55fc82c4",
+	"projectname": "%E8%B6%85%E6%9C%AC%E5%AD%A6%E9%99%A2",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "pageShop/chooseSub/chooseSub",
+					"pathName": "pageShop/chooseSub/chooseSub",
+					"query": "id=80",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pageShop/shopPay/shopPay",
+					"pathName": "pageShop/shopPay/shopPay",
+					"query": "sid=83",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pageExam/chapterList/chapterList",
+					"pathName": "pageExam/chapterList/chapterList",
+					"query": "id=80&api=corrents",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pageExam/makeExam/makeExam",
+					"pathName": "pageExam/makeExam/makeExam",
+					"query": "id=126&sid=91&type=subject&api=getChapterDetail",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demo/demo",
+					"pathName": "pages/demo/demo",
+					"query": "id=80&api=corrents",
+					"scene": null
+				}
+			]
+		}
+	}
+}
