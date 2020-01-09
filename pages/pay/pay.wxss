@@ -1,0 +1,6 @@
+.price_item {
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-bottom: 1px solid #e0e0e0;
+}

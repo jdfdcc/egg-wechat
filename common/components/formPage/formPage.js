@@ -9,11 +9,13 @@ Component({
      */
     submit: function (e) {
       let formId = e.detail.formId;
-      // console.log('收集', formId)
+      console.log('收集', formId)
       if (formId !== 'the formId is a mock one') {
-        http('collectFormId', {
-          formId: e.detail.formId,
-          resource: "orderLite"
+        http({
+          api: 'collectFormId',
+          loading: false,
+        }, {
+          formId: e.detail.formId
         })
       }
     }

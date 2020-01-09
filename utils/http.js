@@ -112,21 +112,25 @@ const http = function (options, params, url, text = '加载中') {
       opt.header["code"] = code;
       opt.header['Access-Control-Max-Age'] = '86400';
       opt.header['resource'] = 'orderLite';
-      
       // 自动登录
-      if (!apiConfig.noLogin && !cookie) {
-        login(() => {
-          if (cookie) {
-            opt.header['cookie'] = cookie;
-          }
-          let requestTask = wx.request(opt);
-        })
-      } else {
-        if (cookie) {
-          opt.header['cookie'] = cookie;
-        }
-        let requestTask = wx.request(opt)
+      if (cookie) {
+        opt.header['cookie'] = cookie;
       }
+      let requestTask = wx.request(opt);
+
+      // if (!apiConfig.noLogin && !cookie) {
+      //   login(() => {
+      //     if (cookie) {
+      //       opt.header['cookie'] = cookie;
+      //     }
+      //     let requestTask = wx.request(opt);
+      //   })
+      // } else {
+      //   if (cookie) {
+      //     opt.header['cookie'] = cookie;
+      //   }
+      //   let requestTask = wx.request(opt)
+      // }
     })
   })
 }

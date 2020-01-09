@@ -1,5 +1,4 @@
 {
-	"miniprogramRoot": "/",
 	"description": "项目配置文件。",
 	"packOptions": {
 		"ignore": [
@@ -27,7 +26,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.1",
 	"appid": "wxcb03144d55fc82c4",
-	"projectname": "%E8%B6%85%E6%9C%AC%E5%AD%A6%E9%99%A2",
+	"projectname": "demo",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -47,42 +46,32 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 4,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
-					"name": "pageShop/chooseSub/chooseSub",
-					"pathName": "pageShop/chooseSub/chooseSub",
-					"query": "id=80",
-					"scene": null
-				},
-				{
-					"id": 1,
-					"name": "pageShop/shopPay/shopPay",
-					"pathName": "pageShop/shopPay/shopPay",
+					"name": "pages/shops/shops",
+					"pathName": "pages/shops/shops",
 					"query": "sid=83",
 					"scene": null
 				},
 				{
-					"id": 2,
-					"name": "pageExam/chapterList/chapterList",
-					"pathName": "pageExam/chapterList/chapterList",
-					"query": "id=80&api=corrents",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "pageExam/makeExam/makeExam",
-					"pathName": "pageExam/makeExam/makeExam",
-					"query": "id=126&sid=91&type=subject&api=getChapterDetail",
+					"id": 1,
+					"name": "pages/shopDetail/shopDetail",
+					"pathName": "pages/shopDetail/shopDetail",
+					"query": "id=5dc8125ac71d6f9ec7d95778",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/demo/demo",
-					"pathName": "pages/demo/demo",
-					"query": "id=80&api=corrents",
+					"name": "pages/pay/pay",
+					"pathName": "pages/pay/pay",
+					"query": "id=5dc8125ac71d6f9ec7d95778",
 					"scene": null
 				}
 			]

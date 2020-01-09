@@ -2,7 +2,7 @@
 import httpConfig from './httpConfig.js';
 
 // 环境切换 test uat pro
-const http = httpConfig.pro
+const http = httpConfig.test
 
 /**
  * @name  生成对于的函数对象
@@ -23,10 +23,16 @@ const config = function (url, method = 'GET', loading = true, autoToast = true, 
 
 // 配置接口调用方式
 export default {
+  collectFormId: config(`${http.SHOP}/wx/user/collectFormId`),
   // 微信登录
-  wxlogin: config(`${http.SHOP}/wx/wxlogin`, 'POST'),
-  decrypt: config(`${http.SHOP}/wx/decrypt`, 'POST'),
-  userInfo: config(`${http.SHOP}/wx/userInfo`),
+  wxlogin: config(`${http.SHOP}/wx/user/login`, 'POST'),
+  decrypt: config(`${http.SHOP}/wx/user/decrypt`, 'POST'),
+  userInfo: config(`${http.SHOP}/wx/user/info`),
   wxPay: config(`${http.SHOP}/wx/pay`, 'POST'),
+  createOrder: config(`${http.SHOP}/wx/order/create`, 'POST'),
+  payOrder: config(`${http.SHOP}/wx/order/pay`, 'POST'),
+  // 获取商城列表
+  shopList: config(`${http.SHOP}/wx/shop/list`, 'POST'),
+  shopDetail: config(`${http.SHOP}/wx/shop/detail`),
 }
 export const httpObj = http;

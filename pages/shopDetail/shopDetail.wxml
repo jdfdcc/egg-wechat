@@ -1,0 +1,5 @@
+<rich-text nodes="{{detail.detail}}" />
+
+<view bindtap="buyShop" class="fix-buy">
+  去购买
+</view>

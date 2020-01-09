@@ -1,0 +1,5 @@
+<block wx:for="{{list}}" wx:key="{{item._id}}">
+  <view data-item="{{item}}" bindtap="toDetail" class="shopItem">
+    {{item.name}}({{item.endTime}})
+  </view>
+</block>

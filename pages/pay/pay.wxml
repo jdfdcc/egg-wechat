@@ -1,0 +1,8 @@
+<view
+  bindtap="toPay"
+  data-item="{{item}}"
+  class="price_item"
+  wx:for="{{priceDetail.items}}"
+  wx:key="{{item.uuid}}">
+  {{item.desc}}/{{item.price}}
+</view>

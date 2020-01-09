@@ -1,8 +1,5 @@
 import http from './../utils/http.js';
-import api from './../utils/api.js';
-import { updateToken, updateOpenId, updateUserInfo as updateUser } from './../redux/actions/action.js'
-import store from './../redux/index.js';
-import { httpObj } from '../api/api.js';
+
 /**
  * 登录接口
  */
@@ -59,9 +56,75 @@ const wxPay = function () {
   })
 }
 
+/**
+ * 创建订单接口
+ * pay 表示是否直接支付了
+ */
+const createOrder = function (params, success) {
+  const { pay = true, ...otherParams } = params;
+  http({
+    api: 'createOrder',
+    data: otherParams,
+  }).then(res => {
+    console.log(res)
+    const { data } = res;
+    if (pay) {
+      payOrder(data._id);
+    } else {
+      success && success(data);
+    }
+  })
+}
+
+/**
+ * 支付订单接口
+ */
+const payOrder = function (orderId) {
+  http({
+    api: 'payOrder',
+    data: {
+      orderId,
+    },
+  }).then(res => {
+    console.log(res)
+    const { data } = res;
+    wx.requestPayment({
+      timeStamp: data.timeStamp,
+      nonceStr: data.nonceStr,
+      package: data.package,
+      signType: 'MD5',
+      paySign: data.paySign,
+    })
+  })
+}
+
+/**
+ * 发送消息
+ */
+const sendInfo = function (orderId) {
+  http({
+    api: 'payOrder',
+    data: {
+      orderId,
+    },
+  }).then(res => {
+    console.log(res)
+    const { data } = res;
+    wx.requestPayment({
+      timeStamp: data.timeStamp,
+      nonceStr: data.nonceStr,
+      package: data.package,
+      signType: 'MD5',
+      paySign: data.paySign,
+    })
+  })
+}
+
 export default {
   login,
   decrypt,
   getUserInfo,
   wxPay,
+  createOrder,
+  payOrder,
 }

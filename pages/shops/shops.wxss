@@ -1,0 +1,6 @@
+.shopItem {
+  height: 90rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #e0e0e0;
+  line-height: 90rpx;
+}

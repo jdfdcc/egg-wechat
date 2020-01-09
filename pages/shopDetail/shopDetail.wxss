@@ -1,0 +1,10 @@
+.fix-buy {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  background: #fff;
+}

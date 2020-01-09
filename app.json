@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/demo/demo"
+    "pages/demo/demo",
+    "pages/shops/shops",
+    "pages/shopDetail/shopDetail",
+    "pages/pay/pay"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -8,5 +11,8 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "ui-form-page": "./common/components/formPage/formPage"
+  }
 }
